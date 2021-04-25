@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="client.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="client.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>BruPoker</h1>
+      <div class="input-data">
+          <input id="message" placeholder="Message">
+          <button id="send" onclick="setup()">Send</button>
+        </div>
+    </div>
+
+    <div class="content">
+      <div class="card-vote">
+        <button id="card" onclick="vote(1)" style="grid-area: card-1;">
+          <img src="./images/mister_m.jpg" style="width: 200px; height: 200px;">
+          1
+        </button>
+        <button id="card" onclick="vote(2)" style="grid-area: card-2;">
+          <img src="./images/presto.jpg" style="width: 200px; height: 200px;">
+          2
+        </button>
+        <button id="card" onclick="vote(3)" style="grid-area: card-3;">
+          <img src="./images/voldemort.jpg" style="width: 200px; height: 200px;">
+          3
+        </button>
+        <button id="card" onclick="vote(5)" style="grid-area: card-5;">
+          <img src="./images/harry.jpg" style="width: 200px; height: 200px;">
+          5
+        </button>
+        <button id="card" onclick="vote(8)" style="grid-area: card-8;">
+          <img src="./images/dumbledore.jpg" style="width: 200px; height: 200px;">
+          8
+        </button>
+        <button id="card" onclick="vote(13)" style="grid-area: card-13;">
+          <img src="./images/gandalf.jpg" style="width: 200px; height: 200px;">
+          13
+        </button>
+        <button id="card" onclick="vote(21)" style="grid-area: card-21; place-self: center;">
+          <img src="./images/ronaldinho.jpg" style="width: 200px; height: 200px;">
+          21
+        </button>
+      </div>
+
+      <div id="result">
+        <button id="flip" onclick="flip()" disabled="true">Flip</button>
+        <button id="reset" onclick="reset()" disabled="true">Reset</button>
+      </div>
+    </div>
+  </body>
+</html>

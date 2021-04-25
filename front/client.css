@@ -1,0 +1,75 @@
+body {
+    font-family: fantasy;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid rgb(56, 13, 56);
+    width: -moz-fit-content;
+}
+
+/* .input-data {
+    margin-left: 10px;;
+} */
+
+.content {
+    display: grid;
+    grid-template-areas: 'cards votes';
+    justify-content: stretch;
+    column-gap: 10px;
+}
+
+.card-vote {
+    grid-area: 'cards';
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    '.   card-21  card-21 .'
+    '.     card-8 card-13 .'
+    'card-1 card-2 card-3 card-5';
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    background-color: transparent;
+    border: transparent;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+#result {
+    grid-area: 'votes';
+    border: 1px solid purple;
+    padding: 10px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+#vote {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+#voteValue {
+    margin-left: 10px;
+}
+
+#square {
+    width: 10px;
+    height: 10px;
+    background: green;
+    margin-left: 10px;
+}
