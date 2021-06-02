@@ -1,10 +1,17 @@
-const WebSocket = require('ws');
-const server = new WebSocket.Server({
-  port: 3000
-});
+const { Server } = require('ws');
+const express = require('express');
+
+const PORT = process.env.PORT || 3000;
+const INDEX = '/front/index.html';
+
+const server = express()
+  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+const wss = new Server({ server });
 
 let sockets = [];
-server.on('connection', function(socket) {
+wss.on('connection', function(socket) {
   // Adicionamos cada nova conexão/socket ao array `sockets`
   sockets.push(socket);
   // Quando você receber uma mensagem, enviamos ela para todos os sockets
