@@ -2,10 +2,10 @@ const { Server } = require('ws');
 const express = require('express');
 
 const PORT = process.env.PORT || 3000;
-const INDEX = '/front/index.html';
+const INDEX = '/front';
 
 const server = express()
-  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+  .use('/', express.static(__dirname + INDEX))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 const wss = new Server({ server });

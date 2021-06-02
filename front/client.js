@@ -2,7 +2,7 @@ var ws;
 var isFlipped = false;
 
 function setup() {
-    ws = new WebSocket('ws://localhost:3000');
+    ws = new WebSocket('ws://bruxoes-poker.herokuapp.com');
     ws.onopen = function() {
       const name = document.querySelector('#message').value;
 
